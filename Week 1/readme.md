@@ -1,52 +1,69 @@
-## SOP: Creating a Chatbot Interface Using Streamlit
+## SOP: Building a Chatbot for F1-OPT Visa Process
 
 ### Objective:
 
-To create a chatbot interface using Streamlit for retrieving relevant answers based on user queries, focusing on F1 optional practical training (OPT).
+To build a chatbot that can intelligently answer questions related to the F1-OPT visa process using technologies like OpenAI, LangChain, and Pinecone.
 
 ### Key Steps:
 
-1. **Importing Libraries:**
+ 1. **Install Required Libraries:**
 
-   - Import necessary libraries for interacting with documents, handling text, generating embeddings, and managing the user interface.
+    - Use pip to install necessary libraries.
 
-2. **Loading Environment Variables:**
+ 2. **Web Scraping:**
 
-   - Define and load environment variables such as OpenAI API key and Pinecone API key using `st.secrets` function in Streamlit.
+    - Use Beautiful Soup to scrape data for the project.
 
-3. **Preprocessing Documents:**
+ 3. **Data Processing:**
 
-   - Utilize langchain functions like `documented directory loader` and `recursive splitter` to preprocess text files by splitting text into chunks.
+    - Load and process the data for training.
 
-4. **Initializing Vector Database:**
+ 4. **Set Up OpenAI Environment:**
 
-   - Initialize the vector database (Pinecone) by creating an index and storing processed documents in the vector store.
+    - Set up the OpenAI key for the project.
 
-5. **Creating Context Retriever Function:**
+ 5. **Load Data in LangChain's Document Loader:**
 
-   - Develop a function to generate relevant search queries based on the current conversational context for context-aware results.
+    - Use directory loader and recursive character text splitter functions to split and process the data.
 
-6. **Creating Conversational Retrieval Chain:**
+ 6. **Create Embeddings:**
 
-   - Establish a retrieval chain that leverages document embeddings to answer user queries by combining LLM with the retriever and prompt.
+    - Utilize OpenAI's embedding technique to create embeddings for the data.
 
-7. **Handling User Input:**
+ 7. **Save Vectors in Pinecone Database:**
 
-   - Use Streamlit's input box function (`st.chat_input`) to allow users to type questions and generate responses using the retrieval function.
+    - Use Pinecone as a vector database to store the created vectors efficiently.
 
-8. **Displaying Conversation:**
+ 8. **Set Up Pinecone Connections:**
 
-   - Loop through the conversation history, display each message (human or AI), and maintain the chat history in the session to show the conversation flow.
+    - Establish Pinecone connections using API keys.
+
+ 9. **Create Vector Retriever:**
+
+    - Develop a retriever to find relevant information in the stored data.
+
+10. **Create QA Chain:**
+
+    - Use LangChain to connect the retriever to OpenAI for generating natural language responses.
+
+11. **Process Queries:**
+
+    - Use the QA chain to process queries and provide responses based on the trained data.
 
 ### Cautionary Notes:
 
-- Ensure the correct initialization of environment variables and vector database to avoid errors in retrieving and storing data.
-- Properly handle user input and maintain the context of the conversation to provide accurate responses.
-
-### Link to Loom
-https://www.loom.com/share/73d41c5863cd4632b4fadf209b2d1298
+- Ensure proper installation of libraries and dependencies.
+- Handle data processing with care to maintain data integrity.
+- Securely manage API keys for OpenAI and Pinecone connections.
 
 ### Tips for Efficiency:
 
-- Refer to langchain and Pinecone documentation for detailed information on functions and methods used in the code.
-- Use Streamlit's features like session state and chat display functions to enhance the user experience and maintain conversation history effectively.
+- Regularly update libraries and frameworks for optimal performance.
+- Test the chatbot with various queries to ensure accurate responses.
+- Customize the chatbot for specific use cases to enhance its effectiveness.
+
+By following these steps, you can successfully build a chatbot for answering questions related to the F1-OPT visa process.
+
+Link to Loom
+
+https://www.loom.com/share/b8ec4aadaf69403abcf48b48cfe1c5f5
