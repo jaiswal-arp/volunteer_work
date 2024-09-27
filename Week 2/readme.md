@@ -43,7 +43,7 @@ To create a chatbot interface using Streamlit for retrieving relevant answers ba
 - Ensure the correct initialization of environment variables and vector database to avoid errors in retrieving and storing data.
 - Properly handle user input and maintain the context of the conversation to provide accurate responses.
 
-### Link to Loom
+### Link to Video
 https://www.loom.com/share/73d41c5863cd4632b4fadf209b2d1298
 
 ### Tips for Efficiency:
